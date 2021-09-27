@@ -4,7 +4,11 @@ const OtherPage = () => {
      
     return (
         <div>
-            oi
+            if(location.pathname === '/otherPage1') {
+                <div className="blue"></div>
+            } else {
+                <div className="red"></div>
+            }
         </div>
     )
 }

@@ -37,10 +37,8 @@ const Form = () => {
         setCpf(cpfFormatado);
     }
 
-    function handleNumero() {
-        var num = document.getElementById('num').value;
-        var numFormatado = num.replace(/(?\d{2}\)?\s)?(\d{4,5}\-\d{4})/)
-        setNumero(numFormatado);
+    function handleNumero(e) {
+        setNumero(e.target.value);
     }
 
     return (
@@ -53,7 +51,7 @@ const Form = () => {
                 Profissão: <input value={profissao} onChange={handleProfisao}></input>
                 <br/>
                 CPF/CNPJ: <input type="number" id="cpf" maxlength="14" value={cpf} onChange={handleCpf}></input>
-                Telefone: <input type="tel" id="num" placeholder="(99) 99999-9999" maxlength="11"  pattern="(\([0-9]{2}\))\s([9]{1})?([0-9]{4})-([0-9]{4})" value={numero} onChange={handleNumero}></input>
+                Telefone: <input type="tel" placeholder="(99) 99999-9999" maxlength="11"  pattern="(\([0-9]{2}\))\s([9]{1})?([0-9]{4})-([0-9]{4})" value={numero} onChange={handleNumero}></input>
              </form>
         </div>
     )

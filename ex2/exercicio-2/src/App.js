@@ -10,8 +10,7 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route path="/" exact component={HomePage} />
-          <Route path="/otherPage1" component={OtherPage} />
-          <Route path="/otherPage2" component={OtherPage} />
+          <Route path="/otherPage/:red?:blue"  component={OtherPage} />
         </Switch>
       </BrowserRouter>
     </div>

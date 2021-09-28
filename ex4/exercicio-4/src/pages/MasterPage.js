@@ -7,7 +7,7 @@ const MasterPage = () => {
     return (
         <Layout>
             <Sider>
-                <h1>SIDERBAR</h1>
+                <h1>SIDEBAR</h1>
             </Sider>
         </Layout>
     )

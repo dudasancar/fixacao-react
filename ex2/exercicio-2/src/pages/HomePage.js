@@ -1,12 +1,17 @@
 import React from 'react';
-import { Link, Router } from 'react-router-dom';
-import OtherPage from './OtherPage';
+import { Link } from 'react-router-dom';
+
 
 const HomePage = () => {
+    const blue = parseInt(1);
+    const red = parseInt(2);
     return (
         <div>
-            <Link to="/otherPage1">teste</Link>
-            <Link to="/otherPage2">teste</Link>
+            
+            <Link to={{pathname: `/otherPage/${blue}`}}>teste</Link>
+            <br />
+            <Link to={{pathname: `/otherPage/${red}`}}>teste</Link>
+            
         </div>
     )
 }

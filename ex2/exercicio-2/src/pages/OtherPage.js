@@ -1,16 +1,18 @@
 import React from 'react';
-import styles from './OtherPage.css';
 
-const OtherPage = () => {
-        if(window.location.pathname === '/otherPage1') {
-            <div className="blue" style={styles.blue}></div>
-        } else {
-            <div className="red" style={styles.red}></div>
-        }
+const OtherPage = (props) => {
+    const azul = props.match.params.blue;
+    const vermelho = props.match.params.red;
+    console.log(azul)
+        
     return (
-        <div>
-           
-        </div>
+        <>
+           {azul === '1' ? 
+           (<div style={{background: 'blue'}}>azul</div>) 
+           : 
+           (<div style={{background: 'red'}}>vermelho</div>)
+           }
+        </>
     )
 }
 

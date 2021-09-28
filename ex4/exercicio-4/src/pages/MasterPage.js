@@ -1,15 +1,12 @@
-import { Layout } from 'antd';
+
 import React from 'react';
 
-const { Sider } = Layout;
 
-const MasterPage = () => {
+const MasterPage = ({children}) => {
     return (
-        <Layout>
-            <Sider>
-                <h1>SIDEBAR</h1>
-            </Sider>
-        </Layout>
+        <div>
+           {children}
+        </div>
     )
 }
 
